@@ -1,0 +1,117 @@
+@import "src/variables";
+
+.navbar-light {
+  background-color: $navbar;
+  text-align: center;
+
+  .navbar-brand {
+    font-size: 1em;
+    color: $primary;
+  }
+
+  .navbar-nav {
+    display: inline-block;
+    width: auto;
+    .nav-item {
+      margin-left: 0;
+      float: none;
+    }
+    .nav-link {
+      text-align: center;
+      letter-spacing: 1.2px;
+      color: $white;
+      text-align:center;
+
+      &:hover {
+        color: $primary;
+      }
+
+    }
+
+    .account-icon {
+      vertical-align: top;
+    }
+
+    #account-link {
+      span {
+        vertical-align: top;
+      }
+    }
+
+  }
+
+}
+
+@media(min-width:$tablet) {
+  .navbar-light {
+    .navbar-brand {
+      font-size: 1.5em;
+    }
+  }
+}
+
+@media(min-width:$desktop) {
+  .navbar-light {
+    .navbar-brand {
+      font-size: 2em;
+      color: $primary;
+    }
+    .navbar-nav {
+      width: auto;
+      margin: auto;
+      .nav-item {
+        display: inline-block;
+        margin-left: 2em;
+        float: left;
+      }
+
+      .highlighted {
+        color: $primary;
+      }
+      #account-link {
+        position: absolute;
+        right: 1%;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .display-none {
+    display: none;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .nav-fixed, .nav-top  {
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+    }
+
+    .nav-fixed {
+      position: fixed;
+      opacity: .8;
+      text-align: center;
+      z-index: 99999;
+      margin: auto;
+      width: 100%;
+    }
+
+    .nav-top {
+      opacity: 1;
+      position: absolute;
+      .navbar-nav {
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    .nav-invisible {
+      opacity: 0;
+    }
+
+    .inline-block {
+
+    }
+}

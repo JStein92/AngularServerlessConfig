@@ -1,0 +1,27 @@
+<div class="helped-wrapper">
+  <div class="main-text">
+    <h1>Who We've Helped</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+
+</div>
+
+<ng-masonry-grid
+    [masonryOptions]="{ transitionDuration: '0.8s', gutter: 5 }"
+    [useAnimation]="true"
+    [useImagesLoaded]="true"
+    [scrollAnimationOptions]="{ animationEffect: 'effect-4', minDuration : 0.4, maxDuration : 0.7 }"
+    class="grid">
+      <ng-masonry-grid-item id="{{'masonry-item-'+i}}" *ngFor="let item of helpedList; let i = index" class="item">
+        <div class="image">
+          <h2>{{item.name}}</h2>
+          <img src={{item.image}}  class="image" />
+        </div>
+      </ng-masonry-grid-item>
+</ng-masonry-grid>
+
+<div class="view-all">
+  <button mat-raised-button>View All</button>
+  <hr>
+</div>

@@ -1,0 +1,29 @@
+<div class="billing-info">
+
+  <h3>Billing Info</h3>
+
+  <mat-form-field class="billing-form">
+    <input matInput placeholder="FULL NAME">
+  </mat-form-field>
+
+  <mat-form-field class="billing-form">
+    <input matInput placeholder="ADDRESS">
+  </mat-form-field>
+  <div class="city-zip">
+    <mat-form-field class="billing-form city">
+      <input matInput placeholder="CITY">
+    </mat-form-field>
+
+    <mat-form-field class="billing-form zip">
+      <input matInput placeholder="ZIP CODE">
+    </mat-form-field>
+  </div>
+  <mat-form-field class="billing-form">
+    <mat-select placeholder="COUNTRY">
+      <mat-option *ngFor="let country of countryList" value="country" placeholder="COUNTRY">{{country.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+
+</div>

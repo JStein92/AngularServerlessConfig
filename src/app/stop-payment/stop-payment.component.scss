@@ -1,0 +1,9 @@
+@import "src/variables";
+.stop-payment-wrapper {
+  width: auto;
+}
+@media(min-width:$desktop) {
+  .stop-payment-wrapper {
+    width: 50%;
+  }
+}

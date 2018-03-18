@@ -1,0 +1,119 @@
+@import "src/variables";
+
+.icons {
+  display: none;
+}
+
+.radio-button {
+  display: inline-block;
+    vertical-align: top;
+    margin-top: 0;
+}
+
+
+
+.payment-form {
+  .payment {
+    display: block;
+  }
+}
+
+.payment-method {
+
+  width: auto;
+  padding-top: 1em;
+
+  .payment-method-mobile {
+    width: 100%;
+  }
+}
+
+.payment-method-header {
+  margin-bottom: 10px;
+}
+
+.checkboxes {
+  margin: 2%;
+  font-size: 1em
+}
+
+.billing-form {
+  width: 100%;
+}
+.ach-example {
+  width: 50%;
+  min-width: 15em;
+  background-image: url('../../assets/img/ach-example.png');
+  background-size: contain;
+  height: 5em;
+  background-repeat: no-repeat;
+}
+
+@media(min-width:$desktop) {
+  .checkboxes {
+    margin: 2%;
+    font-size: .8em
+  }
+
+  .ach-example {
+    background-size: contain;
+    height: 5em;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+
+  .icons {
+    display: none;
+    width: auto;
+    display: inline-block;
+    vertical-align: top;
+    margin: .5em;
+    border-right: 1px solid $light-grey;
+    padding-right: 3%;
+    .card-icon {
+      font-size: 4em;
+    }
+    .ach-icon {
+      margin-left: 0.04em;
+      font-size: 3.6em;
+    }
+    p {
+      text-align: center;
+      font-size: .8em;
+    }
+
+  }
+
+  .payment-form {
+    display: inline-block;
+    width: 68%;
+  }
+
+  .dates {
+    display: block;
+    .month, .year, .cvv {
+      width: 32%;
+      display: inline-block;
+    }
+  }
+
+  .payment-method {
+    display: block;
+    padding-top: 0;
+    width: 100%;
+    .bank, .holder {
+      width: 49%;
+      display: inline-block;
+    }
+    .routing, .account, .billing-form{
+      width: 32%;
+      display: inline-block;
+    }
+
+    .payment-method-mobile {
+      display: none;
+    }
+
+  }
+
+}

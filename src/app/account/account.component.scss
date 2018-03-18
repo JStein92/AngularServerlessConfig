@@ -1,0 +1,38 @@
+@import "src/variables";
+mat-list-item {
+  &:hover {
+    cursor: pointer;
+    color: $primary;
+  }
+}
+.options-mobile {
+display: inline-block;
+width: 100%;
+margin-bottom: 1em;
+}
+.options {
+  display: none;
+}
+@media(min-width:$desktop) {
+  .options-mobile {
+    display: none;
+  }
+  .options {
+    display: block;
+  }
+  .header {
+    padding: 6em 10% 3em;
+  }
+
+  .highlighted {
+    color: $primary;
+  }
+
+  .wrapper-left {
+    display: inline-block;
+    border-right: 1px solid $light-grey;
+    margin-right: 2em;
+    margin-left: 5%;
+    min-width: 12em;
+  }
+}

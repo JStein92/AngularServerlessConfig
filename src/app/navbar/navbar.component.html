@@ -1,3 +1,25 @@
-<p>
-  navbar works!
-</p>
+<nav class="navbar navbar-expand-lg navbar-light" [ngClass]=" {'nav-fixed':fixed, 'nav-top': !fixed, 'nav-invisible': invisible }">
+  <a class="navbar-brand" href="#"  [ngClass]=" {'display-none':fixed} ">{{companyName | uppercase}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav" [ngClass]=" {'full-width':fixed} ">
+      <li class="nav-item">
+        <a class="nav-link" pageScroll href="#about-us" routerLink="/" [ngClass]=" {'highlighted': aboutVisible}">{{'About Us' | uppercase}}<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" pageScroll href="#next-meeting" routerLink="/" [ngClass]=" {'highlighted': nextMeetingVisible}">{{'Next Meeting' | uppercase}}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" pageScroll href="#helped" routerLink="/" [ngClass]=" {'highlighted': helpedVisible}">{{'Who We\'ve Helped' | uppercase}}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/join" href="" [ngClass]=" {'highlighted': page == 'join'}">{{'Join Now' | uppercase}}</a>
+      </li>
+      <li class="nav-item" id="account-link">
+        <a class="nav-link account-link" routerLink="/account" href="" [ngClass]=" {'highlighted': page == 'account'}"><i class="material-icons account-icon">account_circle</i><span>{{' My Account' | uppercase}}</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>

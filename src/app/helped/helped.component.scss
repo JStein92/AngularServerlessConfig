@@ -1,0 +1,103 @@
+@import "src/variables";
+
+.helped-wrapper {
+  background-color: $white;
+  padding: 2%;
+  text-align: center;
+  h1 {
+    color: $primary;
+  }
+
+}
+
+.helped-list{
+  display: inline-block;
+}
+
+.item {
+  width: 100%;
+  display: inline-block;
+
+  img {
+    width: 100%;
+  }
+}
+
+.grid {
+  width: 100%;
+}
+
+.image {
+   text-align: left;
+}
+
+.view-all {
+  background: $background;
+  padding: 20px;
+  text-align: center;
+  p {
+    font-size: .8em;
+    color: white;
+  }
+  button {
+    margin: 20px;
+    color: white;
+    background-color: $navbar;
+  }
+}
+
+h2 {
+   position: absolute;
+   top: 10%;
+   width: 100%;
+   padding: 4%;
+   color: black;
+   background: rgba(255, 255, 255, .9);
+   span {
+     font-size: .5em;
+   }
+}
+
+
+@media(min-width:$tablet) {
+  .helped-wrapper {
+    padding: 3% 20%;
+  }
+
+  .item {
+    width: 49%;
+  }
+
+  h2 {
+     position: absolute;
+     top: 30%;
+     left: 4%;
+     width: 90%;
+     padding: 8%;
+     color: black;
+     background: rgba(255, 255, 255, .9);
+     span {
+       font-size: .5em;
+     }
+  }
+
+  // .image {
+  //    position: relative;
+  //    display: inline-block;
+  //    margin: 1px;
+  //    text-align: left;
+  //    img {
+  //      display: inline-block;
+  //      height: 300px;
+  //      width: auto;
+  //
+  //    }
+  // }
+
+}
+
+@media(min-width:$desktop) {
+  .item {
+    width: 32.9%;
+  }
+}

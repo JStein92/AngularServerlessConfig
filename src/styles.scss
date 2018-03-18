@@ -1,0 +1,73 @@
+@import "src/variables";
+
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+      margin: 0 3%;
+}
+.outer-wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -100px;
+}
+.footer,
+.push {
+  height: 100px;
+}
+* {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1.1px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.mat-checkbox-layout {
+  white-space: normal!important;
+}
+mat-checkbox {
+  display: block!important;
+}
+.mat-select-value {
+    overflow: auto!important;
+    height: 1.2em;
+  }
+.header {
+  text-align: center;
+  padding: 1em 10% 2%;
+  h1 {
+    color: $primary;
+  }
+}
+
+
+  .mat-list-item {
+    .mat-list-item-content {
+      font-size: 1.1em;
+      margin: 1em;
+    }
+  }
+
+
+  @media(min-width:$desktop) {
+    .header {
+      text-align: center;
+      padding: 6em 10% 1em;
+    }
+    .wrapper {
+      display: flex;
+      margin: 1em 1em 4% 11%;
+    }
+  }

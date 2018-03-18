@@ -1,0 +1,80 @@
+<div class="payment-method">
+  <h3 class="payment-method-header">Payment Method</h3>
+
+<mat-radio-group class="icons" [(value)]="paymentType" (change)="radioChange($event.value)" >
+  <mat-radio-button class="radio-button" value="check" [checked]="true">
+    <i class="material-icons icon ach-icon">featured_play_list</i>
+    <p>ACH Payment</p>
+  </mat-radio-button>
+
+  <div></div>
+  <mat-radio-button class="radio-button" value="card" >
+    <i class="material-icons icon card-icon">payment</i>
+    <p>Credit card</p>
+  </mat-radio-button>
+
+</mat-radio-group>
+
+<mat-form-field class="payment-method-mobile">
+  <mat-select [(value)]="paymentType" (selectionChange)="radioChange($event.value)">
+    <mat-option value="check">ACH PAYMENT</mat-option>
+    <mat-option value="card">CREDIT CARD</mat-option>
+  </mat-select>
+</mat-form-field>
+
+  <div class="payment-form" [hidden]="paymentType === 'check'">
+    <mat-form-field class="payment">
+      <input matInput placeholder="CARD NUMBER">
+    </mat-form-field>
+    <mat-form-field class="payment">
+      <input matInput placeholder="CARDHOLDER NAME">
+    </mat-form-field>
+    <span class="dates">
+      <mat-form-field class="payment month">
+        <input matInput placeholder="EXPIRE MONTH">
+        <mat-hint>MM</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="payment year">
+        <input matInput placeholder="EXPIRE YEAR">
+        <mat-hint>YYYY</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="payment cvv">
+        <input matInput placeholder="CVV">
+      </mat-form-field>
+    </span>
+  </div>
+
+  <div class="payment-form" [hidden]="paymentType === 'card'">
+    <div class="payment-names">
+      <mat-form-field class="payment bank">
+        <input matInput placeholder="BANK NAME">
+      </mat-form-field>
+      <mat-form-field class="payment holder">
+        <input matInput placeholder="ACCOUNT HOLDER NAME">
+      </mat-form-field>
+    </div>
+    <div class="payment-numbers">
+      <mat-form-field class="payment routing">
+        <input matInput placeholder="ROUTING #">
+      </mat-form-field>
+      <mat-form-field class="payment account">
+        <input matInput placeholder="ACCOUNT #">
+      </mat-form-field>
+      <mat-form-field class="billing-form">
+        <mat-select [(value)]="selectedAccount">
+          <mat-option value="checking">CHECKING</mat-option>
+          <mat-option value="savings">SAVINGS</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="ach-example">
+
+    </div>
+  </div>
+
+  <div class="checkboxes">
+    <mat-checkbox>I commit to amplifying donations to a selected 501(c)(3), in the quarterly amount of $103.00. </mat-checkbox>
+    <mat-checkbox>I understand that this will appear as “The Giving Group” on my credit card statement. </mat-checkbox>
+    <mat-checkbox>(optional) I want to apply my ﬁrst donation immediately to GROUPNAME's current non-proﬁt! </mat-checkbox>
+</div>
+</div>

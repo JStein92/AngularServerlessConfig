@@ -1,0 +1,19 @@
+@import "src/variables";
+
+
+
+@media(min-width:$desktop) {
+
+  .payment-method {
+    width: 100%;
+    margin-right: 5%;
+    margin: 0 2em;
+  }
+
+  .app-billing-info {
+    border-right: 1px solid grey;
+  }
+
+
+
+}

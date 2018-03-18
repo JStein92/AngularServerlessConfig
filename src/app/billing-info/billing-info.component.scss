@@ -1,0 +1,26 @@
+@import "src/variables";
+
+.billing-info {
+  width: auto;
+  .billing-form {
+    display: inline-block;
+    width: 100%;
+  }
+  .city {
+    width: 48%;
+  }
+  .zip {
+    width: 49%;
+  }
+}
+
+.billing-form {
+  width: 100%;
+
+}
+@media(min-width:$desktop) {
+  .billing-info {
+    padding-right: 10%;
+    min-width: 24em;
+  }
+}

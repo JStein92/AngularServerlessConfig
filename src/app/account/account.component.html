@@ -1,0 +1,25 @@
+<app-navbar [page]="'account'"></app-navbar>
+
+<div class="header">
+  <h1>Your Account</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+</div>
+<div class="wrapper">
+  <mat-list role="list" class="wrapper-left options">
+    <mat-list-item role="listitem" (click)="selectOption('billing')" [ngClass]=" {'highlighted': selectedOption === 'billing'}">Billing Info</mat-list-item>
+    <mat-list-item role="listitem" (click)="selectOption('method')" [ngClass]=" {'highlighted': selectedOption === 'method'}">Payment Method</mat-list-item>
+    <mat-list-item role="listitem" (click)="selectOption('stop')" [ngClass]=" {'highlighted': selectedOption === 'stop'}">Stop Payment</mat-list-item>
+  </mat-list>
+
+  <mat-form-field class="payment-method-mobile options-mobile">
+    <mat-select [(value)]="selectedOption">
+      <mat-option value="billing" (selectionChange)="selectOption('billing')">Billing</mat-option>
+      <mat-option value="method" (selectionChange)="selectOption('method')">Payment Method</mat-option>
+      <mat-option value="stop" (selectionChange)="selectOption('stop')">Stop Payment</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <app-billing-info [hidden] = "selectedOption!=('billing')"></app-billing-info>
+  <app-payment-method [hidden] = "selectedOption!=('method')"></app-payment-method>
+  <app-stop-payment [hidden] = "selectedOption!=('stop')"></app-stop-payment>
+</div>
