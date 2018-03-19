@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
-import { environment } from '../../environments/environment';
+import { companyName } from '../common/STRINGRESOURCE';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +7,9 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  private companyName = environment.companyName;
-  private nextMeetingOffsetTop: number;
-  private helpedOffsetTop: number;
+  public companyName = companyName;
+  public nextMeetingOffsetTop: number;
+  public helpedOffsetTop: number;
 
   @ViewChild('nextMeeting') nextMeetingPos;
   @ViewChild('helped') helpedPos;

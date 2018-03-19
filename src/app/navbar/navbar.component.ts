@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener, Inject, Input} from '@angular/core';
 import { PageScrollConfig } from 'ng2-page-scroll';
-import { environment } from '../../environments/environment';
+import { companyName } from '../common/STRINGRESOURCE';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   @Input() helpedPos;
   @Input() page: string;
 
-  companyName = environment.companyName;
+  companyName = companyName;
   public fixed = false;
   public invisible = false;
 

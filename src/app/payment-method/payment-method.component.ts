@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./payment-method.component.scss']
 })
 export class PaymentMethodComponent implements OnInit {
-  private paymentType = 'check';
-  private selectedAccount = 'checking';
+  public paymentType = 'check';
+  public selectedAccount = 'checking';
   constructor() { }
 
   ngOnInit() {

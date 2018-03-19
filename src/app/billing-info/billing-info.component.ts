@@ -8,7 +8,7 @@ import { Countries } from '../common/countries';
   providers: [Countries]
 })
 export class BillingInfoComponent implements OnInit {
-  private countryList: Array<any>;
+  public countryList: Array<any>;
 
   constructor(private countries: Countries) {
     this.countryList = countries.country_list;

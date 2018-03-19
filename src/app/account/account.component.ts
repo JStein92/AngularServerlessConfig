@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./account.component.scss']
 })
 export class AccountComponent implements OnInit {
-private page = 'account';
-private selectedOption = 'billing';
+public page = 'account';
+public selectedOption = 'billing';
   constructor() { }
 
   ngOnInit() {
